@@ -13,7 +13,7 @@ importers:
         version: 1.1.1(@langchain/core@1.0.6(openai@6.9.1(ws@8.18.3)(zod@3.25.76)))(zod@3.25.76)
       '@langchain/community':
         specifier: ^1.0.4
-        version: 1.0.4(@browserbasehq/sdk@2.6.0)(@browserbasehq/stagehand@1.14.0(@playwright/test@1.56.1)(deepmerge@4.3.1)(dotenv@16.6.1)(openai@6.9.1(ws@8.18.3)(zod@3.25.76))(zod@3.25.76))(@ibm-cloud/watsonx-ai@1.7.4)(@langchain/core@1.0.6(openai@6.9.1(ws@8.18.3)(zod@3.25.76)))(cheerio@1.1.2)(ibm-cloud-sdk-core@5.4.4)(jsdom@27.2.0)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@6.9.1(ws@8.18.3)(zod@3.25.76))(pg@8.16.3)(playwright@1.56.1)(weaviate-client@3.9.0)(ws@8.18.3)
+        version: 1.0.4(@browserbasehq/sdk@2.6.0)(@browserbasehq/stagehand@1.14.0(@playwright/test@1.56.1)(deepmerge@4.3.1)(dotenv@16.6.1)(openai@6.9.1(ws@8.18.3)(zod@3.25.76))(zod@3.25.76))(@ibm-cloud/watsonx-ai@1.7.4)(@langchain/core@1.0.6(openai@6.9.1(ws@8.18.3)(zod@3.25.76)))(cheerio@1.1.2)(ibm-cloud-sdk-core@5.4.4)(jsdom@27.2.0)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@6.9.1(ws@8.18.3)(zod@3.25.76))(pg@8.16.3)(playwright@1.57.0)(weaviate-client@3.9.0)(ws@8.18.3)
       '@langchain/core':
         specifier: ^1.0.6
         version: 1.0.6(openai@6.9.1(ws@8.18.3)(zod@3.25.76))
@@ -65,6 +65,9 @@ importers:
       pg:
         specifier: ^8.16.3
         version: 8.16.3
+      playwright:
+        specifier: ^1.57.0
+        version: 1.57.0
       uuid:
         specifier: ^11.0.3
         version: 11.1.0
@@ -2528,8 +2531,18 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
+  playwright-core@1.57.0:
+    resolution: {integrity: sha512-agTcKlMw/mjBWOnD6kFZttAAGHgi/Nw0CZ2o6JqWSbMlI219lAFLZZCyqByTsvVAJq5XA5H8cA6PrvBRpBWEuQ==}
+    engines: {node: '>=18'}
+    hasBin: true
+
   playwright@1.56.1:
     resolution: {integrity: sha512-aFi5B0WovBHTEvpM3DzXTUaeN6eN0qWnTkKx4NQaH4Wvcmc153PdaY2UBdSYKaGYw+UyWXSVyxDUg5DoPEttjw==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  playwright@1.57.0:
+    resolution: {integrity: sha512-ilYQj1s8sr2ppEJ2YVadYBN0Mb3mdo9J0wQ+UuDhzYqURwSoW4n1Xs5vs7ORwgDGmyEh33tRMeS8KhdkMoLXQw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -3515,7 +3528,7 @@ snapshots:
       - openai
       - ws
 
-  '@langchain/community@1.0.4(@browserbasehq/sdk@2.6.0)(@browserbasehq/stagehand@1.14.0(@playwright/test@1.56.1)(deepmerge@4.3.1)(dotenv@16.6.1)(openai@6.9.1(ws@8.18.3)(zod@3.25.76))(zod@3.25.76))(@ibm-cloud/watsonx-ai@1.7.4)(@langchain/core@1.0.6(openai@6.9.1(ws@8.18.3)(zod@3.25.76)))(cheerio@1.1.2)(ibm-cloud-sdk-core@5.4.4)(jsdom@27.2.0)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@6.9.1(ws@8.18.3)(zod@3.25.76))(pg@8.16.3)(playwright@1.56.1)(weaviate-client@3.9.0)(ws@8.18.3)':
+  '@langchain/community@1.0.4(@browserbasehq/sdk@2.6.0)(@browserbasehq/stagehand@1.14.0(@playwright/test@1.56.1)(deepmerge@4.3.1)(dotenv@16.6.1)(openai@6.9.1(ws@8.18.3)(zod@3.25.76))(zod@3.25.76))(@ibm-cloud/watsonx-ai@1.7.4)(@langchain/core@1.0.6(openai@6.9.1(ws@8.18.3)(zod@3.25.76)))(cheerio@1.1.2)(ibm-cloud-sdk-core@5.4.4)(jsdom@27.2.0)(jsonwebtoken@9.0.2)(lodash@4.17.21)(openai@6.9.1(ws@8.18.3)(zod@3.25.76))(pg@8.16.3)(playwright@1.57.0)(weaviate-client@3.9.0)(ws@8.18.3)':
     dependencies:
       '@browserbasehq/stagehand': 1.14.0(@playwright/test@1.56.1)(deepmerge@4.3.1)(dotenv@16.6.1)(openai@6.9.1(ws@8.18.3)(zod@3.25.76))(zod@3.25.76)
       '@ibm-cloud/watsonx-ai': 1.7.4
@@ -3537,7 +3550,7 @@ snapshots:
       jsonwebtoken: 9.0.2
       lodash: 4.17.21
       pg: 8.16.3
-      playwright: 1.56.1
+      playwright: 1.57.0
       weaviate-client: 3.9.0
       ws: 8.18.3
     transitivePeerDependencies:
@@ -5201,9 +5214,17 @@ snapshots:
 
   playwright-core@1.56.1: {}
 
+  playwright-core@1.57.0: {}
+
   playwright@1.56.1:
     dependencies:
       playwright-core: 1.56.1
+    optionalDependencies:
+      fsevents: 2.3.2
+
+  playwright@1.57.0:
+    dependencies:
+      playwright-core: 1.57.0
     optionalDependencies:
       fsevents: 2.3.2
 
